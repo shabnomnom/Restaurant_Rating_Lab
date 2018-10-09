@@ -16,25 +16,20 @@ def restaurant_rating(file):
 		restaurant_ratings_dict[restaurant_name] = rating
 		
 
+	# sorting using list 
+	#for restaurant in restaurant_ratings_dict.items():
+	# 	restaurant_ratings_list.append(restaurant)
 
-	for restaurant in restaurant_ratings_dict.items():
-		restaurant_ratings_list.append(restaurant)
+	# restaurant_ratings_list = sorted(restaurant_ratings_list)
+	# #print (restaurant_ratings_list)
 
-	restaurant_ratings_list = sorted(restaurant_ratings_list)
-	#print (restaurant_ratings_list)
-
-	for item in restaurant_ratings_list:
-		print ('{} is rated at {}.'.format(item[0], item[1]))
-
-
+	# for item in restaurant_ratings_list:
+	# 	print ('{} is rated at {}.'.format(item[0], item[1]))
 
 
-	#print (restaurant_ratings_dict)
 
-	
-
-
-			
-
+	# sorting use sorted method on dictunary before itirating over it: 
+	for restaurant in sorted(restaurant_ratings_dict.items()):
+		print("{} rating is {}.".format(restaurant[0], restaurant[1]))
 
 restaurant_rating(sys.argv[1])
